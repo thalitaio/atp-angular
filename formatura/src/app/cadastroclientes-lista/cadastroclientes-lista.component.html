@@ -1,47 +1,25 @@
 <body>
     <p class="nome-pagina">Lista de Clientes</p>
-        <table>
+        <table *ngIf="lista.length>0; else listaVazia">
             <thead>
                 <tr>
+                    <th>Id: </th>
                     <th>Nome: </th>
                     <th>Sobrenome: </th>
-                    <th>Id: </th>
                     <th>Email </th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Larissa</td>
-                    <td>Silva</td>
-                    <td>2</td>
-                    <td>larissa@gmail.com</td>
-
-                </tr>
-                <tr>
-                    <td>Tatá</td>
-                    <td>Werneck</td>
-                    <td>3</td>
-                    <td>tata@yahoo.com</td>
-                </tr>
-                <tr>
-                    <td>Fernanda</td>
-                    <td>Abreu</td>
-                    <td>4</td>
-                    <td>f789@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Angelina</td>
-                    <td>Jolie</td>
-                    <td>5</td>
-                    <td>jolie@hotmail.com</td>
-                </tr>
-                <tr>
-                    <td>Ana</td>
-                    <td>Gonçalves</td>
-                    <td>6</td>
-                    <td>contato_ana@gmail.com</td>
+                <tr *ngFor="let item of lista">
+                    <td>{{item.id}}</td>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.sobrenome}}</td>
+                    <td>{{item.email}}</td>
                 </tr>
             </tbody>
         </table>
-        <a href="http://"></a>
     </body>
+
+    <ng-template #listaVazia>
+      <div >Nenhum cadastro salvo.</div>
+    </ng-template>

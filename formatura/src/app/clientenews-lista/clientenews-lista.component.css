@@ -23,3 +23,11 @@ td{
     text-align: center;
     padding-bottom: 15px;
 }
+
+div{
+  font-size: 20px;
+  width: 50%;
+  margin: auto;
+  padding-top: 15px;
+  text-align: center;
+}

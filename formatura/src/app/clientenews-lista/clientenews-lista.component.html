@@ -1,52 +1,24 @@
 <body>
 <p class="nome-pagina">Tipo de Clientes</p>
-    <table>
+    <table *ngIf="lista.length>0; else listaVazia">
         <thead>
             <tr>
-                <th>Nome: </th>
-                <th>Sobrenome: </th>
                 <th>Id: </th>
-                <th>Criado em: </th>
-                <th>Última Atualização: </th>
+                <th>Ano Cadastrado: </th>
+                <th>Status: </th>
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Larissa</td>
-                <td>Silva</td>
-                <td>2</td>
-                <td>11/11/2023</td>
-                <td>11/11/2023</td>
-            </tr>
-            <tr>
-                <td>Tatá</td>
-                <td>Werneck</td>
-                <td>3</td>
-                <td>04/08/2023</td>
-                <td>02/09/2023</td>
-            </tr>
-            <tr>
-                <td>Fernanda</td>
-                <td>Abreu</td>
-                <td>4</td>
-                <td>09/11/2023</td>
-                <td>15/12/2023</td>
-            </tr>
-            <tr>
-                <td>Angelina</td>
-                <td>Jolie</td>
-                <td>5</td>
-                <td>11/11/2023</td>
-                <td>11/11/2023</td>
-            </tr>
-            <tr>
-                <td>Ana</td>
-                <td>Gonçalves</td>
-                <td>6</td>
-                <td>21/11/2023</td>
-                <td>31/11/2023</td>
+            <tr *ngFor="let item of lista">
+                <td>{{item.id}}</td>
+                <td>{{item.ano_cadastro}}</td>
+                <td>{{item.status}}</td>
             </tr>
         </tbody>
     </table>
-    <a href="http://"></a>
+
 </body>
+
+<ng-template #listaVazia>
+  <div >Nenhum cadastro salvo.</div>
+</ng-template>

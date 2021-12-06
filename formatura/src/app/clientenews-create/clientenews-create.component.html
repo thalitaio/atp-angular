@@ -2,13 +2,13 @@
     <div id="cadastro">
         <span>Cadastro de Tipo de Cliente</span>
     </div>
-    <form action="">
+    <form (ngSubmit)="salvar()">
         <label for="id">Id:</label>
-        <input type="text" name="id" id="id"/><br />
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome"/><br />
-        <label for="nome">Sobrenome:</label>
-        <input type="text" name="sobrenome" id="sobrenome"/><br />
+        <input type="text" name="id" id="id" [(ngModel)]="id"/><br />
+        <label for="nome">Ano do Cadastro:</label>
+        <input type="text" name="ano_cadastro" id="ano_cadastro" [(ngModel)]="ano_cadastro"/><br />
+        <label for="nome">Status:</label>
+        <input type="text" name="status" id="status" [(ngModel)]="status"/><br />
         <input type="submit" value="Salvar" class="botao-cadastro">
     </form>
 </body>

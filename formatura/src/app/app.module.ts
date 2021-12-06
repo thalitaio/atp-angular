@@ -7,6 +7,7 @@ import { ClientenewsListaComponent } from './clientenews-lista/clientenews-lista
 import { ClientenewsCreateComponent } from './clientenews-create/clientenews-create.component';
 import { CadastroclientesListaComponent } from './cadastroclientes-lista/cadastroclientes-lista.component';
 import { CadastroclientesCreateComponent } from './cadastroclientes-create/cadastroclientes-create.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { CadastroclientesCreateComponent } from './cadastroclientes-create/cadas
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
