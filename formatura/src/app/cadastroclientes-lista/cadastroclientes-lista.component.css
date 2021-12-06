@@ -18,6 +18,7 @@ td{
 .nome-pagina{
     font-size: 20px;
     width: 50%;
-    margin-left: 30em;
+    margin: auto;
     padding-top: 15px;
+    text-align: center;
 }
