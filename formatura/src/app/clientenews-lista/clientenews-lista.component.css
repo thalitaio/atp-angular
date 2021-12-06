@@ -1,0 +1,23 @@
+
+
+table {
+    width: 50%;
+    margin: auto;
+    border-radius: 4px;
+}
+
+th{
+    background-color: #DAE7DD;
+}
+
+td{
+    background: #fff;
+    opacity: 0.6;
+}
+
+.nome-pagina{
+    font-size: 20px;
+    width: 50%;
+    margin-left: 30em;
+    padding-top: 15px;
+}

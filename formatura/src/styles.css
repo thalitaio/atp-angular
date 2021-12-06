@@ -1,0 +1,15 @@
+
+html, body, div{
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:  #F7C9B6;
+    width: 100%;
+    margin: none;
+}
