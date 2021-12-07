@@ -4,13 +4,13 @@
     </div>
     <form (ngSubmit)="salvar()">
         <label for="id">Id:</label>
-        <input type="text" name="id" id="id" [(ngModel)]="id"/><br />
+        <input type="text" name="id" id="id" [(ngModel)]="cliente.id"/>
         <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" [(ngModel)]="nome"/><br />
+        <input type="text" name="nome" id="nome" [(ngModel)]="cliente.nome"/>
         <label for="nome">Sobrenome:</label>
-        <input type="text" name="sobrenome" id="sobrenome" [(ngModel)]="sobrenome"/><br />
+        <input type="text" name="sobrenome" id="sobrenome" [(ngModel)]="cliente.sobrenome"/>
         <label for="nome">E-mail:</label>
-        <input type="text" name="email" id="email" [(ngModel)]="email"/><br />
+        <input type="text" name="email" id="email" [(ngModel)]="cliente.email"/>
         <input type="submit" value="Salvar" class="botao-cadastro">
     </form>
 </body>

@@ -1,3 +1,4 @@
+import { Clientes } from './../model/clientes';
 import { CadastroclientesService } from './../service/cadastroclientes.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CadastroclientesCreateComponent implements OnInit {
 
-  id:number = 0;
-  email:string = "";
-  nome:string = "";
-  sobrenome:string = "";
+  cliente = {} as Clientes;
 
   constructor(private cadastroclientesService:CadastroclientesService) { }
 
@@ -19,22 +17,13 @@ export class CadastroclientesCreateComponent implements OnInit {
   }
 
   salvar(){
-    let cliente = {
-      "id": this.id,
-      "email":this.email,
-      "nome":this.nome,
-      "sobrenome":this.sobrenome
+    this.cadastroclientesService.salvar(this.cliente).subscribe((msg)=>{
+      console.log(msg)
+      this.limpar();
+      });
     }
-    console.log(cliente)
-    this.cadastroclientesService.salvar(cliente);
-    this.limpar();
-  }
 
   private limpar(){
-    this.id = 0;
-    this.email = "";
-    this.nome= "";
-    this.sobrenome = "";
+    this.cliente = {} as Clientes;
   }
-
 }

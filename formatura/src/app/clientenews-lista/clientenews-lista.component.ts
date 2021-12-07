@@ -1,3 +1,4 @@
+import { TipoCliente } from './../model/TipoCliente';
 import { TipoclienteService } from './../service/tipocliente.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clientenews-lista.component.css']
 })
 export class ClientenewsListaComponent implements OnInit {
-  lista:any[]
+  lista:TipoCliente[]
   constructor(private TipoclienteService:TipoclienteService) {
     this.lista = [];
     this.listar();
@@ -17,6 +18,6 @@ export class ClientenewsListaComponent implements OnInit {
   }
 
   private listar(){
-    this.lista = this.TipoclienteService.listar();
+    this.TipoclienteService.listar().subscribe((tipocliente)=>this.lista=tipocliente);
   }
 }

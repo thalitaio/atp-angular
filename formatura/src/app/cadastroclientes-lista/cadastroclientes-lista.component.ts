@@ -1,3 +1,4 @@
+import { Clientes } from './../model/clientes';
 import { CadastroclientesService } from './../service/cadastroclientes.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cadastroclientes-lista.component.css']
 })
 export class CadastroclientesListaComponent implements OnInit {
-  lista:any[]
+  lista:Clientes[]
   constructor(private cadastroclienteService:CadastroclientesService) {
     this.lista = [];
     this.listar();
@@ -17,6 +18,6 @@ export class CadastroclientesListaComponent implements OnInit {
   }
 
   private listar(){
-    this.lista = this.cadastroclienteService.listar();
+    this.cadastroclienteService.listar().subscribe((clientes)=>this.lista=clientes);;
   }
 }
